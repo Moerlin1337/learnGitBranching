@@ -10,7 +10,7 @@ exports.levelSequences = {
   rampup: [
     require('./rampup/detachedHead').level,
     require('./rampup/relativeRefs').level,
-    require('./rampup/relativeRefs2').level,
+    // require('./rampup/relativeRefs2').level,
     require('./rampup/reversingChanges').level
   ],
   move: [
@@ -18,17 +18,17 @@ exports.levelSequences = {
     require('./rampup/interactiveRebase').level
   ],
   mixed: [
-    require('./mixed/grabbingOneCommit').level,
-    require('./mixed/jugglingCommits').level,
-    require('./mixed/jugglingCommits2').level,
+    // require('./mixed/grabbingOneCommit').level,
+    // require('./mixed/jugglingCommits').level,
+    // require('./mixed/jugglingCommits2').level,
     require('./mixed/tags').level,
-    require('./mixed/describe').level
+    // require('./mixed/describe').level
   ],
-  advanced: [
-    require('./rebase/manyRebases').level,
-    require('./advanced/multipleParents').level,
-    require('./rebase/selectiveRebase').level
-  ],
+  // advanced: [
+  //   require('./rebase/manyRebases').level,
+  //   require('./advanced/multipleParents').level,
+  //   require('./rebase/selectiveRebase').level
+  // ],
   remote: [
     require('./remote/clone').level,
     require('./remote/remoteBranches').level,
@@ -37,18 +37,18 @@ exports.levelSequences = {
     require('./remote/fakeTeamwork').level,
     require('./remote/push').level,
     require('./remote/fetchRebase').level,
-    require('./remote/lockedMain').level
+    // require('./remote/lockedMain').level
   ],
-  remoteAdvanced: [
-    require('./remote/pushManyFeatures').level,
-    require('./remote/mergeManyFeatures').level,
-    require('./remote/tracking').level,
-    require('./remote/pushArgs').level,
-    require('./remote/pushArgs2').level,
-    require('./remote/fetchArgs').level,
-    require('./remote/sourceNothing').level,
-    require('./remote/pullArgs').level
-  ]
+  // remoteAdvanced: [
+  //   require('./remote/pushManyFeatures').level,
+  //   require('./remote/mergeManyFeatures').level,
+  //   require('./remote/tracking').level,
+  //   require('./remote/pushArgs').level,
+  //   require('./remote/pushArgs2').level,
+  //   require('./remote/fetchArgs').level,
+  //   require('./remote/sourceNothing').level,
+  //   require('./remote/pullArgs').level
+  // ]
 };
 
 // there are also cute names and such for sequences
@@ -187,51 +187,51 @@ var sequenceInfo = exports.sequenceInfo = {
       'ta_IN': 'உங்களின் 1\'கள் மற்றும் 0\'களை பகிர்வதற்கான நேரம் குழந்தைகளே; குறியிடுதல் (coding) பொது உடமை ஆக்க பட்டுள்ளது'
     }
   },
-  remoteAdvanced: {
-    tab: 'remote',
-    displayName: {
-      'en_US': 'To Origin And Beyond -- Advanced Git Remotes!',
-      'de_DE': 'Bis zum origin und noch weiter',
-      'ja'   : '"origin"とその先へ -- Gitリモート上級編',
-      'fr_FR': 'Vers l\'infini et au-delà -- dépôts distants version avancée',
-      'es_AR': 'Hasta el origin y más allá -- Git Remotes avanzado!',
-      'es_MX': 'Hasta el origin y más allá -- Git Remotes avanzado!',
-      'es_ES': 'Hasta el origen y más allá -- Git Remotes avanzado!',
-      'pt_BR': 'Até a origin e além -- repositórios remotos avançados!',
-      'gl'   : 'Ata á orixe e máis aló -- repositorios remotos avanzados!',
-      'zh_CN': '关于 origin 和它的周边 —— Git 远程仓库高级操作',
-      'zh_TW': '關於 origin 和其它 repo，git remote 的進階指令',
-      'ru_RU': 'Через origin – к звёздам. Продвинутое использование Git Remotes',
-      'uk'   : 'Через origin – до зірок. Прогресивне використання Git Remotes',
-      'ko'   : '"origin"그 너머로 -- 고급 Git 원격 저장소',
-      'vi'   : 'Về với cội nguồn và vươn xa hơn -- nâng cao về các git remote',
-      'sl_SI': 'Do Origina In Naprej -- Napredni Oddaljeni Git',
-      'pl'   : 'Do źródła i dalej -- zaawansowane zdalne repozytoria',
-      'it_IT': "Verso Origin e oltre -- Git Remoto Avanzato!",
-      'ta_IN': 'ஆரம்பம் மற்றும் அதர்க்கு மேல் -- மேம்பட்ட கிட் ரிமோட்டுகள்!'
-    },
-    about: {
-      'en_US': 'And you thought being a benevolent dictator would be fun...',
-      'fr_FR': 'Et vous pensiez qu\'être un dictateur bienfaisant serait amusant...',
-      'ja'   : '絶えず上級者の仕事は存在する。。。',
-      'es_AR': 'Y pensabas que ser un dictador benévolo sería divertido...',
-      'es_MX': 'Y pensabas que ser un dictador benévolo sería divertido...',
-      'es_ES': 'Y pensabas que ser un dictador benévolo sería divertido...',
-      'pt_BR': 'E você achava que ser um déspota esclarecido seria mais divertido...',
-      'gl'   : 'E pensabas que ser un dictador benévolo sería divertido...',
-      'zh_CN': '做一名仁慈的独裁者一定会很有趣……',
-      'zh_TW': '而且你會覺得做一個仁慈的獨裁者會很有趣...',
-      'de_DE': 'Git Remotes für Fortgeschrittene',
-      'ru_RU': 'Весело было быть всесильным мудрым правителем...',
-      'uk'   : 'А ти думав, що бути всесильним диктатором весело...',
-      'ko'   : '자비로운 독재자가 되는게 재밌을 줄 알았겠지만...',
-      'vi'   : 'Và bạn nghĩ làm một kẻ độc tài nhân từ thì sẽ vui ...',
-      'sl_SI': 'In ti si mislil, da je biti dobronamerni diktator zabavno ...',
-      'pl'   : 'A myślałeś, że bycie życzliwym dyktatorem byłoby fajne...',
-      'it_IT': "E tu credevi che essere un dittatore benevolo fosse divertente...",
-      'ta_IN': 'நீங்கள் ஒரு அக்கரை உள்ள சர்வாதிகாரியாக இருப்பது வேடிக்கையாக இருக்கும் என்று நினைத்தீர்களா...'
-    }
-  },
+  // remoteAdvanced: {
+  //   tab: 'remote',
+  //   displayName: {
+  //     'en_US': 'To Origin And Beyond -- Advanced Git Remotes!',
+  //     'de_DE': 'Bis zum origin und noch weiter',
+  //     'ja'   : '"origin"とその先へ -- Gitリモート上級編',
+  //     'fr_FR': 'Vers l\'infini et au-delà -- dépôts distants version avancée',
+  //     'es_AR': 'Hasta el origin y más allá -- Git Remotes avanzado!',
+  //     'es_MX': 'Hasta el origin y más allá -- Git Remotes avanzado!',
+  //     'es_ES': 'Hasta el origen y más allá -- Git Remotes avanzado!',
+  //     'pt_BR': 'Até a origin e além -- repositórios remotos avançados!',
+  //     'gl'   : 'Ata á orixe e máis aló -- repositorios remotos avanzados!',
+  //     'zh_CN': '关于 origin 和它的周边 —— Git 远程仓库高级操作',
+  //     'zh_TW': '關於 origin 和其它 repo，git remote 的進階指令',
+  //     'ru_RU': 'Через origin – к звёздам. Продвинутое использование Git Remotes',
+  //     'uk'   : 'Через origin – до зірок. Прогресивне використання Git Remotes',
+  //     'ko'   : '"origin"그 너머로 -- 고급 Git 원격 저장소',
+  //     'vi'   : 'Về với cội nguồn và vươn xa hơn -- nâng cao về các git remote',
+  //     'sl_SI': 'Do Origina In Naprej -- Napredni Oddaljeni Git',
+  //     'pl'   : 'Do źródła i dalej -- zaawansowane zdalne repozytoria',
+  //     'it_IT': "Verso Origin e oltre -- Git Remoto Avanzato!",
+  //     'ta_IN': 'ஆரம்பம் மற்றும் அதர்க்கு மேல் -- மேம்பட்ட கிட் ரிமோட்டுகள்!'
+  //   },
+  //   about: {
+  //     'en_US': 'And you thought being a benevolent dictator would be fun...',
+  //     'fr_FR': 'Et vous pensiez qu\'être un dictateur bienfaisant serait amusant...',
+  //     'ja'   : '絶えず上級者の仕事は存在する。。。',
+  //     'es_AR': 'Y pensabas que ser un dictador benévolo sería divertido...',
+  //     'es_MX': 'Y pensabas que ser un dictador benévolo sería divertido...',
+  //     'es_ES': 'Y pensabas que ser un dictador benévolo sería divertido...',
+  //     'pt_BR': 'E você achava que ser um déspota esclarecido seria mais divertido...',
+  //     'gl'   : 'E pensabas que ser un dictador benévolo sería divertido...',
+  //     'zh_CN': '做一名仁慈的独裁者一定会很有趣……',
+  //     'zh_TW': '而且你會覺得做一個仁慈的獨裁者會很有趣...',
+  //     'de_DE': 'Git Remotes für Fortgeschrittene',
+  //     'ru_RU': 'Весело было быть всесильным мудрым правителем...',
+  //     'uk'   : 'А ти думав, що бути всесильним диктатором весело...',
+  //     'ko'   : '자비로운 독재자가 되는게 재밌을 줄 알았겠지만...',
+  //     'vi'   : 'Và bạn nghĩ làm một kẻ độc tài nhân từ thì sẽ vui ...',
+  //     'sl_SI': 'In ti si mislil, da je biti dobronamerni diktator zabavno ...',
+  //     'pl'   : 'A myślałeś, że bycie życzliwym dyktatorem byłoby fajne...',
+  //     'it_IT': "E tu credevi che essere un dittatore benevolo fosse divertente...",
+  //     'ta_IN': 'நீங்கள் ஒரு அக்கரை உள்ள சர்வாதிகாரியாக இருப்பது வேடிக்கையாக இருக்கும் என்று நினைத்தீர்களா...'
+  //   }
+  // },
   move: {
     displayName: {
       'en_US': 'Moving Work Around',
@@ -320,50 +320,50 @@ var sequenceInfo = exports.sequenceInfo = {
       'ta_IN': 'கிட் நுட்பங்கள், தந்திரங்கள் மற்றும் உதவிக்குறிப்புகளின் கலவையான பை'
     }
   },
-  advanced: {
-    displayName: {
-      'en_US': 'Advanced Topics',
-      'de_DE': 'Themen für Fortgeschrittene',
-      'ja'   : '上級トピック',
-      'fr_FR': 'Sujets avancés',
-      'es_AR': 'Temas avanzados',
-      'es_MX': 'Temas avanzados',
-      'es_ES': 'Temas avanzados',
-      'pt_BR': 'Temas avançados',
-      'gl'   : 'Temas avanzados',
-      'zh_CN': '高级话题',
-      'zh_TW': '進階主題',
-      'ru_RU': 'Продвинутый уровень',
-      'uk'   : 'Досвідчений рівень',
-      'ko'   : '고급 문제',
-      'vi'   : 'Các chủ đề nâng cao',
-      'sl_SI': 'Napredne Teme',
-      'pl'   : 'Tematy zaawansowane',
-      'it_IT': "Argomenti avanzati",
-      'ta_IN': 'மேம்பட்ட தலைப்புகள்'
-    },
-    about: {
-      'en_US': 'For the truly brave!',
-      'de_DE': '... die nie ein Mensch zuvor gesehen hat.',
-      'ja'   : '勇気ある人のみ！',
-      'fr_FR': 'Pour les plus courageux !',
-      'es_AR': '¡Para personas realmente valientes!',
-      'es_MX': '¡Para los verdaderos valientes!',
-      'es_ES': '¡Para los verdaderos valientes!',
-      'pt_BR': 'Para os verdadeiros valentes!',
-      'gl'   : '¡Para os verdadeiros valerosos!',
-      'zh_CN': '只为真正的勇士！',
-      'zh_TW': '來成為真正的強者吧！',
-      'ru_RU': 'Если ты смелый, ловкий, умелый – потренируйся тут',
-      'uk'   : 'Для хоробрих',
-      'ko'   : '용기있는 도전자를 위해 준비한 문제입니다',
-      'vi'   : 'Mạnh mẽ lên!',
-      'sl_SI': 'Za resnično pogumne!',
-      'pl'   : 'Dla naprawdę odważnych!',
-      'it_IT': "Per i più temerari!",
-      'ta_IN': 'உண்மையிலேயே தைரியமானவர்களுக்கு!'
-    }
-  }
+  // advanced: {
+  //   displayName: {
+  //     'en_US': 'Advanced Topics',
+  //     'de_DE': 'Themen für Fortgeschrittene',
+  //     'ja'   : '上級トピック',
+  //     'fr_FR': 'Sujets avancés',
+  //     'es_AR': 'Temas avanzados',
+  //     'es_MX': 'Temas avanzados',
+  //     'es_ES': 'Temas avanzados',
+  //     'pt_BR': 'Temas avançados',
+  //     'gl'   : 'Temas avanzados',
+  //     'zh_CN': '高级话题',
+  //     'zh_TW': '進階主題',
+  //     'ru_RU': 'Продвинутый уровень',
+  //     'uk'   : 'Досвідчений рівень',
+  //     'ko'   : '고급 문제',
+  //     'vi'   : 'Các chủ đề nâng cao',
+  //     'sl_SI': 'Napredne Teme',
+  //     'pl'   : 'Tematy zaawansowane',
+  //     'it_IT': "Argomenti avanzati",
+  //     'ta_IN': 'மேம்பட்ட தலைப்புகள்'
+  //   },
+  //   about: {
+  //     'en_US': 'For the truly brave!',
+  //     'de_DE': '... die nie ein Mensch zuvor gesehen hat.',
+  //     'ja'   : '勇気ある人のみ！',
+  //     'fr_FR': 'Pour les plus courageux !',
+  //     'es_AR': '¡Para personas realmente valientes!',
+  //     'es_MX': '¡Para los verdaderos valientes!',
+  //     'es_ES': '¡Para los verdaderos valientes!',
+  //     'pt_BR': 'Para os verdadeiros valentes!',
+  //     'gl'   : '¡Para os verdadeiros valerosos!',
+  //     'zh_CN': '只为真正的勇士！',
+  //     'zh_TW': '來成為真正的強者吧！',
+  //     'ru_RU': 'Если ты смелый, ловкий, умелый – потренируйся тут',
+  //     'uk'   : 'Для хоробрих',
+  //     'ko'   : '용기있는 도전자를 위해 준비한 문제입니다',
+  //     'vi'   : 'Mạnh mẽ lên!',
+  //     'sl_SI': 'Za resnično pogumne!',
+  //     'pl'   : 'Dla naprawdę odważnych!',
+  //     'it_IT': "Per i più temerari!",
+  //     'ta_IN': 'உண்மையிலேயே தைரியமானவர்களுக்கு!'
+  //   }
+  // }
 };
 
 exports.getTabForSequence = function(sequenceName) {
